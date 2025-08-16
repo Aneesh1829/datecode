@@ -1,0 +1,22 @@
+﻿{
+  "": "https://turborepo.com/schema.json",
+  "pipeline": {
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "test": {
+      "dependsOn": ["^test"]
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}
